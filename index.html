@@ -147,7 +147,7 @@ a{text-decoration:none;color:inherit;}
 
 /* ── BLOG ── */
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--gap-grid);}
-.blog-card{background:var(--cream);border:2px solid var(--border-card);padding:3px;transition:transform .25s;}
+.blog-card{background:var(--cream);border:2px solid var(--border-card);padding:3px;transition:transform .25s;display:flex;flex-direction:column;}
 .blog-card:hover{transform:translateY(-4px);}
 .blog-card-in{border:0.5px solid var(--border-inner);display:flex;flex-direction:column;flex:1;}
 .blog-card img{width:100%;height:190px;object-fit:cover;display:block;border-bottom:1px solid var(--border-inner);}
