@@ -1,33 +1,7 @@
 {
+  "storitve": [],
   "kontakt_email": "info@trepka-maserka.si",
   "kontakt_telefon": "+386 (0)3 456 7890",
   "kontakt_naslov": "Kosovelova ulica 7, 3000 Celje",
-  "delovni_cas": "Pon–Pet: 9:00–20:00 | Sob: 9:00–15:00 | Ned: Zaprto",
-  "storitve": [
-    {
-      "naziv": "Depilacija z voskom",
-      "opis": "Topel in hladni vosek za občutljive predele. Hitro, učinkovito in udobno."
-    },
-    {
-      "naziv": "Nega obraza",
-      "opis": "Individualni pristop za vsak tip kože. Od anti-age do aknaste kože."
-    },
-    {
-      "naziv": "Threading",
-      "opis": "Natančno oblikovanje obrvi z nitko. Tudi sprehodi brez naročila."
-    },
-    {
-      "naziv": "Manikura in pedikura",
-      "opis": "OPI in Artistic laki, geliranje, IBX tretma za krepitev nohtov."
-    }
-  ],
-  "cenik": [
-    {
-      "naziv": "Striženje las",
-      "cena": "28",
-      "postavke": ["Posvet", "Pranje + masaža glave", "Striženje (moški/ženske)", "Oblikovanje s fenom"]
-    },
-    {
-      "naziv": "Tretmaji za lase",
-      "cena": "15",
-      "postavke": ["Olaplex zaščita", "Maroško
+  "delovni_cas": "Pon–Pet: 9:00–20:00 | Sob: 9:00–15:00 | Ned: Zaprto"
+}
