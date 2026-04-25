@@ -10,54 +10,25 @@
 <style>
 html{scroll-behavior:smooth;}
 *{margin:0;padding:0;box-sizing:border-box;}
-
-/* ── BARVNA PALETA ── */
 :root{
-  --red:#8a2926;
-  --red-dark:#6e1e1c;
-  --gold:#c4922a;
-  --cream:#fdf8f2;
-  --parchment:#f5ede0;
-  --blush:#f7e6df;
-  --dark:#1e0d07;
-  --text:#3d1a0e;
-  --body:#5a3e35;
-  --muted:#8a7068;
-  --border-card:#8a2926;
-  --border-inner:#c4a09a;
-  --spacing-section:84px;
-  --spacing-card-h:24px;
-  --gap-grid:20px;
+  --red:#8a2926;--red-dark:#6e1e1c;--gold:#c4922a;
+  --cream:#fdf8f2;--parchment:#f5ede0;--blush:#f7e6df;
+  --dark:#1e0d07;--text:#3d1a0e;--body:#5a3e35;--muted:#8a7068;
+  --border-card:#8a2926;--border-inner:#c4a09a;
+  --spacing-section:84px;--spacing-card-h:24px;--gap-grid:20px;
 }
-
 body{font-family:"Lato",sans-serif;color:var(--text);background:var(--parchment);overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
-
-/* ── TIPOGRAFSKI SISTEM ──
-   Playfair Display italic: H1, H2, H3 kartice, citati, footer brand, logo
-   Lato 700 uppercase:      navigacija, gumbi, eyebrow labele, oznake
-   Lato 400:                tekoče besedilo, opisi, footer kontakt         */
-
-/* ── ORNAMENTALNI ELEMENTI ── zlata = samo geometrija, nikoli besedilo */
 .orn-rule{display:flex;align-items:center;justify-content:center;gap:12px;margin:14px 0;}
 .orn-rule::before,.orn-rule::after{content:"";flex:1;height:1px;background:var(--gold);max-width:70px;}
 .orn-diamond{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;}
-
-/* ── NASLOVI SEKCIJ ── dve varianti, enotni razmiki */
 .orn-header{text-align:center;margin-bottom:48px;}
 .orn-header .eyebrow{font-family:"Lato",sans-serif;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--red);display:block;margin-bottom:10px;}
 .orn-header h2{font-family:"Playfair Display",serif;font-style:italic;font-size:2.1rem;font-weight:400;color:var(--text);margin:0;}
 .orn-header p{font-size:14px;color:var(--body);margin-top:12px;line-height:1.75;}
-
 .plain-header{margin-bottom:48px;}
 .plain-header h2{font-family:"Playfair Display",serif;font-style:italic;font-size:2rem;font-weight:400;color:var(--text);}
 .plain-header p{font-size:14px;color:var(--body);margin-top:10px;line-height:1.75;}
-
-/* ── KARTICE — enoten dvojni rob sistem ── */
-.r-card{border:2px solid var(--border-card);padding:3px;}
-.r-card-in{border:0.5px solid var(--border-inner);}
-
-/* ── GUMBI — enotna višina 46px (14+14 padding + 18 font) ── */
 .btn{display:inline-block;font-family:"Lato",sans-serif;font-weight:700;letter-spacing:2px;font-size:11px;cursor:pointer;border:2px solid transparent;transition:background .25s,border-color .25s,color .25s;text-transform:uppercase;border-radius:0;}
 .btn-primary{background:var(--red);color:white;padding:14px 38px;border-color:var(--red);}
 .btn-primary:hover{background:var(--red-dark);border-color:var(--red-dark);}
@@ -65,8 +36,6 @@ a{text-decoration:none;color:inherit;}
 .btn-outline:hover{background:var(--red);color:white;}
 .btn-outline-white{background:transparent;color:white;padding:14px 38px;border-color:rgba(255,255,255,.65);}
 .btn-outline-white:hover{background:white;color:var(--red);border-color:white;}
-
-/* ── HEADER ── */
 .site-header{position:absolute;top:0;left:0;width:100%;z-index:1000;padding:22px 48px;transition:all .3s;}
 .site-header.shrink{position:fixed;background:var(--cream);border-bottom:1px solid var(--border-inner);padding:14px 48px;}
 .header-container{display:flex;justify-content:space-between;align-items:center;max-width:1300px;margin:0 auto;}
@@ -82,8 +51,6 @@ a{text-decoration:none;color:inherit;}
 .menu-toggle{display:none;flex-direction:column;cursor:pointer;gap:5px;}
 .menu-toggle span{width:24px;height:2px;background:white;transition:.3s;display:block;}
 .site-header.shrink .menu-toggle span{background:var(--text);}
-
-/* ── HERO ── */
 .hero-slider{position:relative;height:100vh;min-height:620px;overflow:hidden;background-color:var(--dark);}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;color:white;}
 .slide.active{opacity:1;z-index:1;}
@@ -94,14 +61,10 @@ a{text-decoration:none;color:inherit;}
 .slide-rule::before,.slide-rule::after{content:"";width:50px;height:1px;background:rgba(255,255,255,.35);}
 .slide-rule-gem{width:6px;height:6px;background:rgba(232,200,122,.8);transform:rotate(45deg);}
 .slide p{font-family:"Lato",sans-serif;font-size:15px;margin-bottom:30px;color:rgba(255,255,255,.92);letter-spacing:.3px;line-height:1.75;}
-
-/* ── LAYOUT ── */
 .section{padding:var(--spacing-section) 0;}
 .section-cream{background:var(--cream);}
 .section-parchment{background:var(--parchment);}
 .container{max-width:1200px;margin:0 auto;padding:0 24px;}
-
-/* ── STORITVE ── */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap-grid);}
 .service-card{background:var(--cream);border:2px solid var(--border-card);padding:3px;transition:transform .25s;}
 .service-card:hover{transform:translateY(-5px);}
@@ -111,8 +74,6 @@ a{text-decoration:none;color:inherit;}
 .service-card h3{font-family:"Playfair Display",serif;font-style:italic;font-size:1.05rem;font-weight:400;color:var(--red);}
 .service-rule{width:28px;height:1px;background:var(--gold);}
 .service-card p{font-size:14px;color:var(--body);line-height:1.75;}
-
-/* ── ZAKAJ MI ── */
 .why-us{background:var(--blush);}
 .two-columns{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
 .why-text .eyebrow-small{font-family:"Lato",sans-serif;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--red);}
@@ -121,8 +82,6 @@ a{text-decoration:none;color:inherit;}
 .why-text strong{color:var(--red);font-weight:700;}
 .before-after-frame{padding:5px;background:var(--cream);border:1px solid var(--border-inner);display:block;}
 .before-after-frame img{width:100%;display:block;border:2px solid var(--red);}
-
-/* ── CENIK ── */
 .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--gap-grid);}
 .price-card{background:var(--cream);border:2px solid var(--border-card);padding:3px;}
 .price-card-in{border:0.5px solid var(--border-inner);padding:28px var(--spacing-card-h) 24px;display:flex;flex-direction:column;align-items:center;gap:10px;}
@@ -133,8 +92,6 @@ a{text-decoration:none;color:inherit;}
 .price-card ul li{border-bottom:0.5px solid var(--border-inner);padding-bottom:2px;}
 .price-card ul li:last-child{border-bottom:none;}
 .price-rule{width:28px;height:1px;background:var(--gold);}
-
-/* ── TESTIMONIALI ── italic samo za citate */
 .testimonials{background:var(--dark);color:var(--cream);}
 .test-header{text-align:center;margin-bottom:48px;}
 .test-header h2{font-family:"Playfair Display",serif;font-style:italic;font-size:2rem;font-weight:400;color:var(--cream);}
@@ -144,8 +101,6 @@ a{text-decoration:none;color:inherit;}
 .testimonial-quote{font-size:48px;color:var(--gold);font-family:"Playfair Display",serif;line-height:.8;margin-bottom:12px;opacity:.65;}
 .testimonial-item p{font-family:"Playfair Display",serif;font-style:italic;font-size:15px;line-height:1.8;color:rgba(253,248,242,.9);}
 .testimonial-item h4{font-family:"Lato",sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:18px;}
-
-/* ── BLOG ── */
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--gap-grid);}
 .blog-card{background:var(--cream);border:2px solid var(--border-card);padding:3px;transition:transform .25s;display:flex;flex-direction:column;}
 .blog-card:hover{transform:translateY(-4px);}
@@ -156,8 +111,6 @@ a{text-decoration:none;color:inherit;}
 .blog-card p{font-size:13px;color:var(--body);line-height:1.75;margin-bottom:14px;}
 .blog-card a{margin-top:auto;font-family:"Lato",sans-serif;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);font-weight:700;transition:color .25s;}
 .blog-card a:hover{color:var(--red-dark);}
-
-/* ── NEWSLETTER ── */
 .newsletter-section{background:var(--dark);color:var(--cream);padding:72px 0;}
 .newsletter-header{text-align:center;margin-bottom:32px;}
 .newsletter-header h2{font-family:"Playfair Display",serif;font-style:italic;font-size:1.9rem;font-weight:400;color:var(--cream);}
@@ -167,8 +120,6 @@ a{text-decoration:none;color:inherit;}
 .newsletter-form input::placeholder{color:rgba(253,248,242,.5);}
 .newsletter-form button{padding:14px 28px;background:var(--gold);color:var(--dark);border:1px solid var(--gold);font-family:"Lato",sans-serif;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;font-size:11px;transition:background .25s;border-radius:0;}
 .newsletter-form button:hover{background:#d4a840;}
-
-/* ── FOOTER ── */
 .footer{background:#150904;padding:56px 0 28px;}
 .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(196,146,42,.2);}
 .footer h3{font-family:"Playfair Display",serif;font-style:italic;font-size:1rem;color:var(--gold);font-weight:400;margin-bottom:14px;}
@@ -178,14 +129,10 @@ a{text-decoration:none;color:inherit;}
 .social-icons{display:flex;gap:16px;margin-top:4px;}
 .social-icons a{font-size:18px;color:#9a8878;line-height:1;}
 .copyright{text-align:center;padding-top:24px;font-family:"Lato",sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(154,136,120,.6);}
-
-/* ── LEBDEČI ELEMENTI ── */
 .whatsapp-chat{position:fixed;bottom:28px;left:20px;background:var(--red);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:22px;z-index:1000;transition:background .25s,transform .25s;border:1px solid rgba(196,146,42,.35);}
 .whatsapp-chat:hover{background:var(--red-dark);transform:scale(1.08);}
 .book-tab{position:fixed;bottom:20px;right:20px;background:var(--red);color:white;padding:13px 26px;font-family:"Lato",sans-serif;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;z-index:999;cursor:pointer;border:1px solid rgba(255,255,255,.22);transition:background .25s;}
 .book-tab:hover{background:var(--red-dark);}
-
-/* ── MODAL ── */
 .modal{display:none;position:fixed;inset:0;background:rgba(30,13,7,.9);z-index:2000;justify-content:center;align-items:center;}
 .modal-content{background:var(--cream);max-width:480px;width:90%;padding:4px;position:relative;border:2px solid var(--red);}
 .modal-inner{border:0.5px solid var(--border-inner);padding:36px 28px;}
@@ -195,8 +142,6 @@ a{text-decoration:none;color:inherit;}
 .modal-rule{width:36px;height:1px;background:var(--gold);margin:10px 0 20px;}
 .modal-inner input,.modal-inner select{width:100%;padding:12px 14px;margin:5px 0;border:1px solid var(--border-inner);background:white;font-family:"Lato",sans-serif;font-size:14px;color:var(--text);outline:none;border-radius:0;transition:border-color .2s;-webkit-appearance:none;appearance:none;}
 .modal-inner input:focus,.modal-inner select:focus{border-color:var(--red);}
-
-/* ── RESPONSIVE ── */
 @media(max-width:768px){
   .main-nav{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--cream);border-top:1px solid var(--border-inner);padding:20px 24px;}
   .main-nav.active{display:block;}
@@ -254,7 +199,6 @@ a{text-decoration:none;color:inherit;}
   </div>
 </section>
 
-<!-- Storitve: polni ornament -->
 <section id="services" class="section section-parchment">
   <div class="container">
     <div class="orn-header">
@@ -263,120 +207,106 @@ a{text-decoration:none;color:inherit;}
       <h2>Naše storitve</h2>
       <p>Širok nabor frizerskih in kozmetičnih tretmajev, prilagojenih vam.</p>
     </div>
-    <div class="services-grid">
-
-      <div class="service-card">
-        <div class="service-card-in">
-          <div class="service-icon-circle">
-            <svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M 8,26 H 40 L 56,38 H 8 Z" fill="#f7e6df" stroke="#8a2926" stroke-width="2.2"/>
-              <line x1="10" y1="29" x2="38" y2="29" stroke="#c4a09a" stroke-width="0.9" stroke-dasharray="3,3"/>
-              <line x1="10" y1="32" x2="44" y2="32" stroke="#c4a09a" stroke-width="0.9" stroke-dasharray="3,3"/>
-              <line x1="10" y1="35" x2="50" y2="35" stroke="#c4a09a" stroke-width="0.9" stroke-dasharray="3,3"/>
-              <path d="M 40,26 L 56,12 L 56,38 Z" fill="white" stroke="#8a2926" stroke-width="2.2"/>
-              <circle cx="48" cy="25" r="2.2" fill="#8a2926"/>
-              <path d="M 48,23 V 13" stroke="#8a2926" stroke-width="1.8"/>
-              <path d="M 45,16 L 48,13 L 51,16" stroke="#8a2926" stroke-width="1.8" fill="none"/>
-              <circle cx="48" cy="12" r="1.2" fill="#c4922a"/>
-              <path d="M 14,40 C 12,44 16,47 14,52" stroke="#8a2926" stroke-width="1.6" fill="none"/>
-              <path d="M 28,40 C 28,44 28,47 28,52" stroke="#8a2926" stroke-width="1.6" fill="none"/>
-              <path d="M 42,40 C 40,44 44,47 42,52" stroke="#8a2926" stroke-width="1.6" fill="none"/>
-            </svg>
-          </div>
-          <div class="service-gem"></div>
-          <h3>Depilacija z voskom</h3>
-          <div class="service-rule"></div>
-          <p>Topel in hladni vosek za občutljive predele. Hitro, učinkovito in udobno.</p>
+    <div class="services-grid" id="services-grid">
+      <div class="service-card"><div class="service-card-in">
+        <div class="service-icon-circle">
+          <svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 8,26 H 40 L 56,38 H 8 Z" fill="#f7e6df" stroke="#8a2926" stroke-width="2.2"/>
+            <line x1="10" y1="29" x2="38" y2="29" stroke="#c4a09a" stroke-width="0.9" stroke-dasharray="3,3"/>
+            <line x1="10" y1="32" x2="44" y2="32" stroke="#c4a09a" stroke-width="0.9" stroke-dasharray="3,3"/>
+            <line x1="10" y1="35" x2="50" y2="35" stroke="#c4a09a" stroke-width="0.9" stroke-dasharray="3,3"/>
+            <path d="M 40,26 L 56,12 L 56,38 Z" fill="white" stroke="#8a2926" stroke-width="2.2"/>
+            <circle cx="48" cy="25" r="2.2" fill="#8a2926"/>
+            <path d="M 48,23 V 13" stroke="#8a2926" stroke-width="1.8"/>
+            <path d="M 45,16 L 48,13 L 51,16" stroke="#8a2926" stroke-width="1.8" fill="none"/>
+            <circle cx="48" cy="12" r="1.2" fill="#c4922a"/>
+            <path d="M 14,40 C 12,44 16,47 14,52" stroke="#8a2926" stroke-width="1.6" fill="none"/>
+            <path d="M 28,40 C 28,44 28,47 28,52" stroke="#8a2926" stroke-width="1.6" fill="none"/>
+            <path d="M 42,40 C 40,44 44,47 42,52" stroke="#8a2926" stroke-width="1.6" fill="none"/>
+          </svg>
         </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-in">
-          <div class="service-icon-circle">
-            <svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <ellipse cx="28" cy="34" rx="16" ry="21" fill="#f7e6df" stroke="#8a2926" stroke-width="2.2"/>
-              <circle cx="21" cy="29" r="2.5" fill="#8a2926" stroke="none"/>
-              <line x1="21" y1="26" x2="21" y2="21" stroke="#8a2926" stroke-width="1.4"/>
-              <line x1="18.5" y1="26.5" x2="16" y2="22" stroke="#8a2926" stroke-width="1.2"/>
-              <line x1="23.5" y1="26.5" x2="26" y2="22" stroke="#8a2926" stroke-width="1.2"/>
-              <circle cx="35" cy="29" r="2.5" fill="#8a2926" stroke="none"/>
-              <line x1="35" y1="26" x2="35" y2="21" stroke="#8a2926" stroke-width="1.4"/>
-              <line x1="32.5" y1="26.5" x2="30" y2="22" stroke="#8a2926" stroke-width="1.2"/>
-              <line x1="37.5" y1="26.5" x2="40" y2="22" stroke="#8a2926" stroke-width="1.2"/>
-              <path d="M 20,41 Q 28,48 36,41" stroke="#8a2926" stroke-width="1.8" fill="none"/>
-              <circle cx="14" cy="37" r="1.2" fill="#c4922a"/>
-              <circle cx="16.5" cy="40" r="0.8" fill="#c4922a"/>
-              <circle cx="42" cy="37" r="1.2" fill="#c4922a"/>
-              <circle cx="39.5" cy="40" r="0.8" fill="#c4922a"/>
-              <line x1="50" y1="8" x2="50" y2="20" stroke="#c4922a" stroke-width="1.8"/>
-              <line x1="44" y1="14" x2="56" y2="14" stroke="#c4922a" stroke-width="1.8"/>
-              <line x1="46" y1="10" x2="54" y2="18" stroke="#c4922a" stroke-width="1"/>
-              <line x1="46" y1="18" x2="54" y2="10" stroke="#c4922a" stroke-width="1"/>
-            </svg>
-          </div>
-          <div class="service-gem"></div>
-          <h3>Nega obraza</h3>
-          <div class="service-rule"></div>
-          <p>Individualni pristop za vsak tip kože. Od anti-age do aknaste kože.</p>
+        <div class="service-gem"></div>
+        <h3>Depilacija z voskom</h3>
+        <div class="service-rule"></div>
+        <p>Topel in hladni vosek za občutljive predele. Hitro, učinkovito in udobno.</p>
+      </div></div>
+      <div class="service-card"><div class="service-card-in">
+        <div class="service-icon-circle">
+          <svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="28" cy="34" rx="16" ry="21" fill="#f7e6df" stroke="#8a2926" stroke-width="2.2"/>
+            <circle cx="21" cy="29" r="2.5" fill="#8a2926" stroke="none"/>
+            <line x1="21" y1="26" x2="21" y2="21" stroke="#8a2926" stroke-width="1.4"/>
+            <line x1="18.5" y1="26.5" x2="16" y2="22" stroke="#8a2926" stroke-width="1.2"/>
+            <line x1="23.5" y1="26.5" x2="26" y2="22" stroke="#8a2926" stroke-width="1.2"/>
+            <circle cx="35" cy="29" r="2.5" fill="#8a2926" stroke="none"/>
+            <line x1="35" y1="26" x2="35" y2="21" stroke="#8a2926" stroke-width="1.4"/>
+            <line x1="32.5" y1="26.5" x2="30" y2="22" stroke="#8a2926" stroke-width="1.2"/>
+            <line x1="37.5" y1="26.5" x2="40" y2="22" stroke="#8a2926" stroke-width="1.2"/>
+            <path d="M 20,41 Q 28,48 36,41" stroke="#8a2926" stroke-width="1.8" fill="none"/>
+            <circle cx="14" cy="37" r="1.2" fill="#c4922a"/>
+            <circle cx="16.5" cy="40" r="0.8" fill="#c4922a"/>
+            <circle cx="42" cy="37" r="1.2" fill="#c4922a"/>
+            <circle cx="39.5" cy="40" r="0.8" fill="#c4922a"/>
+            <line x1="50" y1="8" x2="50" y2="20" stroke="#c4922a" stroke-width="1.8"/>
+            <line x1="44" y1="14" x2="56" y2="14" stroke="#c4922a" stroke-width="1.8"/>
+            <line x1="46" y1="10" x2="54" y2="18" stroke="#c4922a" stroke-width="1"/>
+            <line x1="46" y1="18" x2="54" y2="10" stroke="#c4922a" stroke-width="1"/>
+          </svg>
         </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-in">
-          <div class="service-icon-circle">
-            <svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M 6,36 Q 8,20 32,13 Q 56,20 58,36 Q 48,30 32,23 Q 16,30 6,36 Z" fill="#8a2926" stroke="none"/>
-              <path d="M 6,42 C 14,34 22,52 30,42 C 38,32 46,52 54,42" stroke="#8a2926" stroke-width="1.7" fill="none"/>
-              <circle cx="6" cy="42" r="4.5" fill="#fdf8f2" stroke="#8a2926" stroke-width="1.6"/>
-              <circle cx="6" cy="42" r="1.8" fill="#8a2926"/>
-              <circle cx="54" cy="42" r="4.5" fill="#fdf8f2" stroke="#8a2926" stroke-width="1.6"/>
-              <circle cx="54" cy="42" r="1.8" fill="#8a2926"/>
-              <path d="M 20,23 C 18,16 20,10 18,4" stroke="#8a2926" stroke-width="1.4" fill="none"/>
-              <path d="M 32,18 C 32,12 32,7 32,2" stroke="#8a2926" stroke-width="1.4" fill="none"/>
-              <path d="M 44,23 C 42,16 46,10 44,4" stroke="#8a2926" stroke-width="1.4" fill="none"/>
-              <circle cx="18" cy="4" r="1.2" fill="#c4922a"/>
-              <circle cx="32" cy="2" r="1.2" fill="#c4922a"/>
-              <circle cx="44" cy="4" r="1.2" fill="#c4922a"/>
-            </svg>
-          </div>
-          <div class="service-gem"></div>
-          <h3>Threading</h3>
-          <div class="service-rule"></div>
-          <p>Natančno oblikovanje obrvi z nitko. Tudi sprehodi brez naročila.</p>
+        <div class="service-gem"></div>
+        <h3>Nega obraza</h3>
+        <div class="service-rule"></div>
+        <p>Individualni pristop za vsak tip kože. Od anti-age do aknaste kože.</p>
+      </div></div>
+      <div class="service-card"><div class="service-card-in">
+        <div class="service-icon-circle">
+          <svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 6,36 Q 8,20 32,13 Q 56,20 58,36 Q 48,30 32,23 Q 16,30 6,36 Z" fill="#8a2926" stroke="none"/>
+            <path d="M 6,42 C 14,34 22,52 30,42 C 38,32 46,52 54,42" stroke="#8a2926" stroke-width="1.7" fill="none"/>
+            <circle cx="6" cy="42" r="4.5" fill="#fdf8f2" stroke="#8a2926" stroke-width="1.6"/>
+            <circle cx="6" cy="42" r="1.8" fill="#8a2926"/>
+            <circle cx="54" cy="42" r="4.5" fill="#fdf8f2" stroke="#8a2926" stroke-width="1.6"/>
+            <circle cx="54" cy="42" r="1.8" fill="#8a2926"/>
+            <path d="M 20,23 C 18,16 20,10 18,4" stroke="#8a2926" stroke-width="1.4" fill="none"/>
+            <path d="M 32,18 C 32,12 32,7 32,2" stroke="#8a2926" stroke-width="1.4" fill="none"/>
+            <path d="M 44,23 C 42,16 46,10 44,4" stroke="#8a2926" stroke-width="1.4" fill="none"/>
+            <circle cx="18" cy="4" r="1.2" fill="#c4922a"/>
+            <circle cx="32" cy="2" r="1.2" fill="#c4922a"/>
+            <circle cx="44" cy="4" r="1.2" fill="#c4922a"/>
+          </svg>
         </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-in">
-          <div class="service-icon-circle">
-            <svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="21" y="4" width="22" height="13" rx="4" fill="#8a2926" stroke="none"/>
-              <line x1="27" y1="5" x2="27" y2="16" stroke="white" stroke-width="1"/>
-              <line x1="32" y1="4" x2="32" y2="17" stroke="white" stroke-width="1"/>
-              <line x1="37" y1="5" x2="37" y2="16" stroke="white" stroke-width="1"/>
-              <rect x="26" y="17" width="12" height="5" rx="2" fill="#8a2926" stroke="none"/>
-              <rect x="15" y="22" width="34" height="34" rx="9" fill="#f7e6df" stroke="#8a2926" stroke-width="2.2"/>
-              <rect x="19" y="30" width="26" height="18" rx="3" fill="none" stroke="#c4922a" stroke-width="1.3"/>
-              <line x1="21" y1="35" x2="43" y2="35" stroke="#c4922a" stroke-width="0.9"/>
-              <line x1="21" y1="39" x2="43" y2="39" stroke="#c4922a" stroke-width="0.9"/>
-              <line x1="21" y1="43" x2="43" y2="43" stroke="#c4922a" stroke-width="0.9"/>
-              <circle cx="32" cy="59" r="2.2" fill="#c4922a"/>
-              <circle cx="25" cy="58" r="1.3" fill="#c4922a"/>
-              <circle cx="39" cy="58" r="1.3" fill="#c4922a"/>
-            </svg>
-          </div>
-          <div class="service-gem"></div>
-          <h3>Manikura in pedikura</h3>
-          <div class="service-rule"></div>
-          <p>OPI in Artistic laki, geliranje, IBX tretma za krepitev nohtov.</p>
+        <div class="service-gem"></div>
+        <h3>Threading</h3>
+        <div class="service-rule"></div>
+        <p>Natančno oblikovanje obrvi z nitko. Tudi sprehodi brez naročila.</p>
+      </div></div>
+      <div class="service-card"><div class="service-card-in">
+        <div class="service-icon-circle">
+          <svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="21" y="4" width="22" height="13" rx="4" fill="#8a2926" stroke="none"/>
+            <line x1="27" y1="5" x2="27" y2="16" stroke="white" stroke-width="1"/>
+            <line x1="32" y1="4" x2="32" y2="17" stroke="white" stroke-width="1"/>
+            <line x1="37" y1="5" x2="37" y2="16" stroke="white" stroke-width="1"/>
+            <rect x="26" y="17" width="12" height="5" rx="2" fill="#8a2926" stroke="none"/>
+            <rect x="15" y="22" width="34" height="34" rx="9" fill="#f7e6df" stroke="#8a2926" stroke-width="2.2"/>
+            <rect x="19" y="30" width="26" height="18" rx="3" fill="none" stroke="#c4922a" stroke-width="1.3"/>
+            <line x1="21" y1="35" x2="43" y2="35" stroke="#c4922a" stroke-width="0.9"/>
+            <line x1="21" y1="39" x2="43" y2="39" stroke="#c4922a" stroke-width="0.9"/>
+            <line x1="21" y1="43" x2="43" y2="43" stroke="#c4922a" stroke-width="0.9"/>
+            <circle cx="32" cy="59" r="2.2" fill="#c4922a"/>
+            <circle cx="25" cy="58" r="1.3" fill="#c4922a"/>
+            <circle cx="39" cy="58" r="1.3" fill="#c4922a"/>
+          </svg>
         </div>
-      </div>
-
+        <div class="service-gem"></div>
+        <h3>Manikura in pedikura</h3>
+        <div class="service-rule"></div>
+        <p>OPI in Artistic laki, geliranje, IBX tretma za krepitev nohtov.</p>
+      </div></div>
     </div>
   </div>
 </section>
 
-<!-- O nas: brez ornamentov, nič tekmuje s fotografijo -->
 <section id="about" class="section why-us">
   <div class="container">
     <div class="two-columns">
@@ -386,7 +316,7 @@ a{text-decoration:none;color:inherit;}
         <p>V Salonu Trepka Maserka uporabljamo najnovejše tehnologije. Naš laser <em>Alexandrite GentleLase Pro</em> omogoča neboleče in trajno odstranjevanje dlak.</p>
         <p><strong>Ali je boleče?</strong> Postopek je popolnoma neboleč zaradi hladilnega sistema.</p>
         <p><strong>Koliko tretmajev potrebujem?</strong> Po prvem tretmaju opazite 30&nbsp;% manj dlak. Za trajno odstranitev priporočamo 6 obiskov.</p>
-        <a href="#" class="btn btn-gold open-modal" style="margin-top:24px;display:inline-block;">Raziščite storitve</a>
+        <a href="#" class="btn btn-outline open-modal" style="margin-top:24px;display:inline-block;">Raziščite storitve</a>
       </div>
       <div>
         <div class="before-after-frame">
@@ -397,7 +327,6 @@ a{text-decoration:none;color:inherit;}
   </div>
 </section>
 
-<!-- Cenik: polni ornament -->
 <section id="pricing" class="section section-cream">
   <div class="container">
     <div class="orn-header">
@@ -406,7 +335,7 @@ a{text-decoration:none;color:inherit;}
       <h2>Cenik</h2>
       <p>Striženje, tretmaji, masaže, nohti &mdash; vse na enem mestu.</p>
     </div>
-    <div class="pricing-grid">
+    <div class="pricing-grid" id="pricing-grid">
       <div class="price-card"><div class="price-card-in">
         <div class="price">od <small>&euro;</small>28</div>
         <div class="price-rule"></div>
@@ -439,12 +368,9 @@ a{text-decoration:none;color:inherit;}
   </div>
 </section>
 
-<!-- Testimoniali: samo h2, brez eyebrow -->
 <section class="testimonials section">
   <div class="container">
-    <div class="test-header">
-      <h2>Kaj pravijo naše stranke</h2>
-    </div>
+    <div class="test-header"><h2>Kaj pravijo naše stranke</h2></div>
     <div class="testimonial-grid">
       <div class="testimonial-item"><div class="testimonial-in">
         <div class="testimonial-quote">&ldquo;</div>
@@ -465,14 +391,13 @@ a{text-decoration:none;color:inherit;}
   </div>
 </section>
 
-<!-- Blog: enostavni naslov -->
 <section class="section section-parchment">
   <div class="container">
     <div class="plain-header">
       <h2>Novice in nasveti</h2>
       <p>Iz našega bloga</p>
     </div>
-    <div class="blog-grid">
+    <div class="blog-grid" id="blog-grid">
       <div class="blog-card"><div class="blog-card-in">
         <img src="slika3.jpg" alt="Nega obraza">
         <div class="blog-card-body">
@@ -501,7 +426,6 @@ a{text-decoration:none;color:inherit;}
   </div>
 </section>
 
-<!-- Newsletter: samo h2 -->
 <div class="newsletter-section">
   <div class="container">
     <div class="newsletter-header">
@@ -520,12 +444,12 @@ a{text-decoration:none;color:inherit;}
     <div class="footer-grid">
       <div>
         <h3>Trepka Maserka d.o.o.</h3>
-        <p>Kosovelova ulica 7<br>3000 Celje, Slovenija</p>
-        <p style="margin-top:10px;">Tel: <a href="tel:+38634567890">+386 (0)3 456 7890</a><br><a href="mailto:info@trepka-maserka.si">info@trepka-maserka.si</a></p>
+        <p id="footer-naslov">Kosovelova ulica 7<br>3000 Celje, Slovenija</p>
+        <p style="margin-top:10px;">Tel: <a href="tel:+38634567890" id="footer-tel">+386 (0)3 456 7890</a><br><a href="mailto:info@trepka-maserka.si" id="footer-email">info@trepka-maserka.si</a></p>
       </div>
       <div>
         <h3>Delovni čas</h3>
-        <p>Pon &ndash; Pet: 9:00 &ndash; 20:00<br>Sobota: 9:00 &ndash; 15:00<br>Nedelja: Zaprto</p>
+        <p id="footer-ure">Pon &ndash; Pet: 9:00 &ndash; 20:00<br>Sobota: 9:00 &ndash; 15:00<br>Nedelja: Zaprto</p>
       </div>
       <div>
         <h3>Sledite nam</h3>
@@ -552,7 +476,7 @@ a{text-decoration:none;color:inherit;}
         <input type="text" placeholder="Ime in priimek" required>
         <input type="email" placeholder="E-pošta" required>
         <input type="tel" placeholder="Telefon" required>
-        <select><option>Striženje</option><option>Barvanje</option><option>Depilacija</option><option>Masaža</option><option>Manikura</option></select>
+        <select id="modal-select"><option>Striženje</option><option>Barvanje</option><option>Depilacija</option><option>Masaža</option><option>Manikura</option></select>
         <button type="submit" class="btn btn-primary" style="width:100%;margin-top:14px;">Pošlji povpraševanje</button>
       </form>
     </div>
@@ -572,8 +496,12 @@ setInterval(()=>{
   cur=(cur+1)%slides.length;
   slides[cur].classList.add("active");
 },5000);
+
 const modal=document.getElementById("bookingModal");
-document.querySelectorAll(".open-modal").forEach(b=>b.addEventListener("click",e=>{e.preventDefault();modal.style.display="flex";}));
+function bindModal(){
+  document.querySelectorAll(".open-modal").forEach(b=>b.addEventListener("click",e=>{e.preventDefault();modal.style.display="flex";}));
+}
+bindModal();
 document.getElementById("bookTab").addEventListener("click",()=>modal.style.display="flex");
 document.querySelector(".close-modal").addEventListener("click",()=>modal.style.display="none");
 window.addEventListener("click",e=>{if(e.target===modal)modal.style.display="none";});
@@ -582,6 +510,71 @@ document.getElementById("bookingForm").addEventListener("submit",function(e){
   alert("Hvala za povpraševanje. Kontaktirali vas bomo v najkrajšem možnem času.");
   modal.style.display="none";
 });
+
+// CMS: beri _data/vsebina.json in posodobi stran
+fetch("/_data/vsebina.json")
+  .then(r=>r.json())
+  .then(data=>{
+
+    // STORITVE — samo naziv in opis, SVG ikone ostanejo
+    if(data.storitve&&data.storitve.length){
+      const cards=document.querySelectorAll(".service-card");
+      data.storitve.forEach((s,i)=>{
+        if(cards[i]){
+          cards[i].querySelector("h3").textContent=s.naziv;
+          cards[i].querySelector("p").textContent=s.opis;
+        }
+      });
+    }
+
+    // CENIK — popolna zamenjava
+    if(data.cenik&&data.cenik.length){
+      document.getElementById("pricing-grid").innerHTML=data.cenik.map(c=>`
+        <div class="price-card"><div class="price-card-in">
+          <div class="price">od <small>&euro;</small>${c.cena}</div>
+          <div class="price-rule"></div>
+          <h3>${c.naziv}</h3>
+          <ul>${c.postavke.map(p=>`<li>${p}</li>`).join("")}</ul>
+          <a href="#" class="btn btn-primary open-modal" style="margin-top:12px;">Rezerviraj</a>
+        </div></div>
+      `).join("");
+      bindModal();
+      document.getElementById("modal-select").innerHTML=data.cenik.map(c=>`<option>${c.naziv}</option>`).join("");
+    }
+
+    // BLOG — popolna zamenjava
+    if(data.blog&&data.blog.length){
+      document.getElementById("blog-grid").innerHTML=data.blog.map(b=>`
+        <div class="blog-card"><div class="blog-card-in">
+          <img src="${b.slika}" alt="${b.naslov}">
+          <div class="blog-card-body">
+            <h4>${b.naslov}</h4>
+            <p>${b.opis}</p>
+            <a href="#">Preberi več &rarr;</a>
+          </div>
+        </div></div>
+      `).join("");
+    }
+
+    // KONTAKT — footer
+    if(data.kontakt_email){
+      const el=document.getElementById("footer-email");
+      el.href="mailto:"+data.kontakt_email;
+      el.textContent=data.kontakt_email;
+    }
+    if(data.kontakt_telefon){
+      const el=document.getElementById("footer-tel");
+      el.href="tel:"+data.kontakt_telefon.replace(/\s/g,"");
+      el.textContent=data.kontakt_telefon;
+    }
+    if(data.kontakt_naslov){
+      document.getElementById("footer-naslov").innerHTML=data.kontakt_naslov.replace(", ","<br>")+"<br>Slovenija";
+    }
+    if(data.delovni_cas){
+      document.getElementById("footer-ure").innerHTML=data.delovni_cas.replace(/\|/g,"<br>");
+    }
+
+  }).catch(()=>{});
 </script>
 </body>
 </html>
