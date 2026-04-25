@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "slike"
+public_folder: "/slike"
+locale: "sl"
+collections:
+  - name: "vsebina"
+    label: "Vsebina strani"
+    files:
+      - name: "splosno"
+        label: "Vsa vsebina"
+        file: "_data/vsebina.json"
+        format: json
+        fields:
+          - label: "Kontaktni email"
+            name: "kontakt_email"
+            widget: "string"
+          - label: "Telefon"
+            name: "kontakt_telefon"
+            widget: "string"
+          - label: "Naslov"
+            name: "kontakt_naslov"
+            widget: "string"
+          - label: "Delovni čas"
+            name: "delovni_cas"
+            widget: "string"
+          - label: "Storitve"
+            name: "storitve"
+            widget: "list"
+            label_singular: "Storitev"
+            fields:
+              - label: "Naziv"
+                name: "naziv"
+                widget: "string"
+              - label: "Opis"
+                name: "opis"
+                widget: "text"
+          - label: "Cenik"
+            name: "cenik"
+            widget: "list"
+            label_singular: "Storitev v ceniku"
+            fields:
+              - label: "Naziv"
+                name: "naziv"
+                widget: "string"
+              - label: "Cena od (€)"
+                name: "cena"
+                widget: "string"
+              - label: "Postavke"
+                name: "postavke"
+                widget: "list"
+                field:
+                  label: "Postavka"
+                  name: "postavka"
+                  widget: "string"

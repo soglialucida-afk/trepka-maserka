@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+[[plugins]]
+  package = "@netlify/plugin-identity"
+
+[template.environment]
+  NETLIFY_IDENTITY_INSTANCE_URL = ""
